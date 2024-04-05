@@ -10,6 +10,6 @@ accountCity='npappa'
 // console.log(accountId)
 /**
  * prefare not to use var
- * because it has scope problem
+ * because of issue in block scope and functional scope
  */
 console.table([accountId,accountEmail,accountPass,accountCity,accountState])

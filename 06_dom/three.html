@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dom learning</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const div = document.createElement('div')
+        console.log(div);
+        div.className = "main"
+        div.id = 'myId' + Math.round(Math.random() * 10 + 1);
+        div.setAttribute('title', 'vivek is here')
+        div.style.backgroundColor = 'orange';
+        div.style.padding = '12px'
+        // div.innerText='vivek and tondare'
+        const addText = document.createTextNode('vivek tondare')
+        div.appendChild(addText)
+        document.body.appendChild(div)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dom learning</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="lang">
+        <li>js</li>
+    </ul>
+    <script>
+        function addlang(lName) {
+            const li = document.createElement('li');
+            let textd = document.createTextNode(lName);
+            li.appendChild(textd)
+            document.querySelector('.lang').appendChild(li)
+        }
+        addlang('vivek')
+        addlang('vivek')
+        addlang('vivek')
+        addlang('vgvgvgivek')
+
+        //edit
+        const secondLang = document.querySelector("li:nth-child(2)")
+        //secondLang.innerHTML="mojo"
+        let newLi = document.createElement('li')
+        newLi.textContent = "MOJO"
+        secondLang.replaceWith(newLi)
+
+        //edit
+        const firtLang = document.querySelector("li:first-child");
+        firtLang.outerHTML='<li>typesciprt</li>'
+        
+        //remove
+        const lastLang = document.querySelector("li:last-child");
+        setTimeout(() => {
+            lastLang.remove()
+            
+        }, 4000);
+
+
+    </script>
+</body>
+
+</html>

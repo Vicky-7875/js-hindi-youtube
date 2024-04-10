@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121;color:#fff">
+    <h1>vivek</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+
+        const sayDate = function (str) {
+            console.log(str, ' vivek', Date.now())
+        }
+        let setIntt;
+        document.getElementById('start').addEventListener('click', function (e) {
+            setIntt = setInterval(sayDate, 1000, 'hi');
+        })
+        document.getElementById('stop').addEventListener('click', function (e) {
+            clearInterval(setIntt)
+        })
+    </script>
+</body>
+
+</html>

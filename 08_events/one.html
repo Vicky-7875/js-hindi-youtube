@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body style="background-color: #212121;color:#fff">
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/20927624/pexels-photo-20927624/free-photo-of-a-woman-sitting-on-the-floor-with-her-legs-crossed.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt=""></li>
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/15830265/pexels-photo-15830265/free-photo-of-low-angle-view-of-a-japanese-temple-and-a-tree-in-autumn-foliage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt=""></li>
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/2438/nature-forest-waves-trees.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt=""></li>
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/86596/owl-bird-eyes-eagle-owl-86596.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt=""></li>
+        </ul>
+    </div>
+
+    <script>
+        //type,timestamp, default prevented
+        //target, toElement,srcElement,currentTarget
+        //clientX,clientY.screenX,screenY
+        //altkey,ctrlkey,shiftkey,keycode
+
+        const li = document.querySelectorAll('li');
+        li.forEach(e => {
+            e.addEventListener('click', function (e) {
+                // console.log(e.target.tagName);
+                // console.log(e.target.parentNode);
+                // removeIT.remove();
+                // console.log(removeIT.parentNode)
+                if (e.target.tagName === 'IMG') {
+                    let removeIT = e.target.parentNode;
+                    removeIT.remove()
+                }
+                // alert(e.target.id);
+            }, false)
+        })
+
+        //event propogation
+        // ->event capturing
+        // -> event bubbling
+        // document.getElementById('images').addEventListener('click', function () {
+        //     console.log('clicked inside the ul');
+        // }, false)//caputuring mode
+
+        // document.getElementById('owl').addEventListener('click', function (e) {
+        //     console.log('clicked  owl');
+        //     e.preventDefault()
+        //     e.stopPropagation()
+        // }, false)
+    </script>
+</body>
+
+</html>

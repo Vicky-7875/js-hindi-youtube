@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API reque</title>
+</head>
+
+<body style="background-color: #121212;color:#fff">
+<h1></h1>
+    <script>
+        const requestUlr = 'https://randomuser.me/api/'
+        const xhr = new XMLHttpRequest();
+        // console.log(xhr.readyState);
+        xhr.open('GET', requestUlr);
+        xhr.onreadystatechange=function(){
+            // console.log(xhr.readyState);
+            if(xhr.readyState===4){
+                const data=JSON.parse(this.responseText);
+                // window.body.appendChild(data.results[0].name.first)
+                document.querySelector('h1').innerHTML=`MY Name is ${data.results[0].name.first} ${data.results[0].name.last}`
+            }
+        }
+        xhr.send()
+    </script>
+</body>
+
+</html>

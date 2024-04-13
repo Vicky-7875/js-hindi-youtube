@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">green</button>
+    <script>
+        //clouser
+        // function init() {
+        //     let name = "Mozilla";
+        //     function displayName() {
+        //         console.log(name);
+        //     }
+        //     displayName();
+        // }
+        // init();
+
+        // function outer() {
+        //     let username = 'vievej';
+        //     function inner() {
+        //         let secret = 'my1212';
+        //         console.log('inner', username);
+        //         function innerInner(){
+        //             console.log('innerinner', secret);
+        //         }
+        //         innerInner()
+        //     }
+        //     function innerTow() {
+        //         console.log('inne towr', username);
+        //     }
+        //     // console.log(secret) //not defiend
+        //     inner()
+        //     innerTow()
+        // }
+        // outer()
+        // // console.log('too outer', username) //not defined
+
+
+
+    </script>
+
+    <script>
+        // document.querySelector('#orange').addEventListener('click', function () {
+        //     document.body.style.backgroundColor='orange'
+        // })
+        // document.querySelector('#green').addEventListener('click', function () {
+        //     document.body.style.backgroundColor='green'
+        // })
+
+        function clickHandler(color) {
+            // document.body.style.backgroundColor = color
+            return function () {
+                document.body.style.backgroundColor = color
+
+            }
+        }
+        document.getElementById('orange').onclick = clickHandler('orange')
+        document.getElementById('green').onclick = clickHandler('green')
+    </script>
+</body>
+
+</html>
